@@ -4,7 +4,7 @@ This tool has been created for conference sessions, creating an easy to read dis
 
 ## Getting Started
 
-Download the package and run from anywhere on your computer. This version does require an internet connection to load the necessary Bootstrap files.
+Download the package, unzip, and run the setup.html. Folder can be extracted anywhere on your computer and run from that location. This version does require an internet connection to load the necessary Bootstrap files.
 
 ### Prerequisites
 
