@@ -10,7 +10,10 @@ Download the package and run from anywhere on your computer. This version does r
 
 Just an internet connection so the following Bootstrap files are loaded:
 
-* [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - The web framework used
+* [Bootstrap CSS](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+* [jQuery](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+* [Popper.js](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+* [Bootstrap JavaScript](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 
 ## Built With
 
