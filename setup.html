@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Configurable Countdown Timer</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Content here -->
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+          <h1>Configurable Countdown Timer</h1>
+          <p>This tool has been created for conference sessions, creating an easy to read display of remaining-time for speakers. Timer will display full screen.</p>
+          <p>You may configure the timer to your liking with the below form. Once configure click "Start Timer"</p>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+      <form action="timer.html" method="get">
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-10">
+            <h3>Timer Options</h3>
+            <div class="row">
+              <div class="col-md-4">
+                <h6>Countdown start time in minutes and seconds</h6>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="timerMinutes">Minutes</label>
+                    <input type="number" class="form-control" name="timerMinutes" id="timerMinutes" min="0" value="5">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="timerSeconds">Seconds</label>
+                    <input type="number" class="form-control" name="timerSeconds" id="timerSeconds" min="0" value ="0" max="59">
+                  </div>
+                </div>
+
+                <h6>Updated timer every X seconds</h6>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <label for="updateSeconds">Seconds</label>
+                    <input type="number" class="form-control" name="updateSeconds" id="updateSeconds" min="1" value ="10" max="60">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h6>Change to warning at X minutes and seconds left</h6>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="warningSwitchMinutes">Minutes</label>
+                    <input type="number" class="form-control" name="warningSwitchMinutes" id="warningSwitchMinutes" min="0" value="5">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="warningSwitchSeconds">Seconds</label>
+                    <input type="number" class="form-control" name="warningSwitchSeconds" id="warningSwitchSeconds" min="0" value ="0" max="59">
+                  </div>
+                </div>
+
+                <h6>Updated warning timer every X seconds</h6>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <label for="warningUpdate">Seconds</label>
+                    <input type="number" class="form-control" name="warningUpdate" id="warningUpdate" min="1" value ="10" max="60">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h6>Change to alarm color at X minutes and seconds left</h6>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="alarmSwitchMinutes">Minutes</label>
+                    <input type="number" class="form-control" name="alarmSwitchMinutes" id="alarmSwitchMinutes" min="0" value="5">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="alarmSwitchSeconds">Seconds</label>
+                    <input type="number" class="form-control" name="alarmSwitchSeconds" id="alarmSwitchSeconds" min="0" value ="0" max="59">
+                  </div>
+                </div>
+
+                <h6>Updated alarm timer every X seconds</h6>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <label for="alarmUpdate">Seconds</label>
+                    <input type="number" class="form-control" name="alarmUpdate" id="alarmUpdate" min="1" value ="10" max="60">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+            <div class="col-md-6">
+              <div class="form-row">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="true" name="expiredBlink" id="expiredBlink">
+                    <label class="form-check-label" for="expiredBlink">
+                      Blink when time has expired
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-row">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="true" name="expiredCount" id="expiredCount">
+                    <label class="form-check-label" for="expiredCount">
+                      Continue counting into negative numbers after time expires
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+          <h3>Appearance Options</h3>
+          <div class="row">
+            <div class="col-md-4">
+              <h6>Normal timer colors</h6>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="normalFontColor">Font</label>
+                  <input type="color" class="form-control" name="normalFontColor" id="normalFontColor" value="#FFFFFF">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="normalBackgroundColor">Background</label>
+                  <input type="color" class="form-control" name="normalBackgroundColor" id="normalBackgroundColor" value="#000000">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+            <h6>alarm timer colors</h6>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="warningFontColor">Font</label>
+                  <input type="color" class="form-control" name="warningFontColor" id="warningFontColor" value="#FFFF00">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="warningBackgroundColor">Background</label>
+                  <input type="color" class="form-control" name="warningBackgroundColor" id="warningBackgroundColor" value="#000000">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h6>Alert timer colors</h6>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="alertFontColor">Font</label>
+                  <input type="color" class="form-control" name="alertFontColor" id="alertFontColor" value="#FF0000">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="alertBackgroundColor">Background</label>
+                  <input type="color" class="form-control" name="alertBackgroundColor" id="alertBackgroundColor" value="#000000">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6 text-center">
+          <button type="submit" class="btn btn-primary" style="">Start Timer</button>
+          <p><em>Note: Timer can be restarted by simply refreshing the page.</em></p>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
